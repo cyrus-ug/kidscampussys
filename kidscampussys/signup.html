@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up | School Portal</title>
+  <link rel="stylesheet" href="signup.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Create an Account</h1>
+    <form id="signupForm" action="/api/auth/signup" method="POST">
+      
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          placeholder="Jane Doe"
+          required
+        />
+      </div>
+      
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="yourusername"
+          required
+        />
+      </div>
+      
+      <div class="form-group password-toggle">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="••••••••"
+          required
+        />
+        <span class="toggle-icon" id="togglePassword">👁️</span>
+      </div>
+      
+      <div class="form-group password-toggle">
+        <label for="confirmPassword">Confirm Password</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          name="confirmPassword"
+          placeholder="••••••••"
+          required
+        />
+        <span class="toggle-icon" id="toggleConfirm">👁️</span>
+      </div>
+      
+      <button type="submit" class="submit-btn">Sign Up</button>
+      
+      <p class="help-text">
+        Already have an account?
+        <a href="login.html">Log in here</a>
+      </p>
+    </form>
+  </div>
+
+  <script>
+    // Simple password toggle script
+    function setupToggle(inputId, toggleId) {
+      const input = document.getElementById(inputId);
+      const toggle = document.getElementById(toggleId);
+      toggle.addEventListener('click', () => {
+        const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+        input.setAttribute('type', type);
+        toggle.textContent = type === 'password' ? '👁️' : '🙈';
+      });
+    }
+    setupToggle('password', 'togglePassword');
+    setupToggle('confirmPassword', 'toggleConfirm');
+  </script>
+</body>
+</html>

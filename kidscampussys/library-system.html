@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Library System | School Portal</title>
+  <link rel="stylesheet" href="library-system.css"/>
+</head>
+<body>
+  <div class="container">
+    <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+    <header class="controls">
+      <button id="newBookBtn" style="display:none;">+ New Book</button>
+      <input id="searchInput" type="text" placeholder="Search by title, author, ISBN"/>
+      <select id="availabilityFilter">
+        <option value="">All</option>
+        <option value="available">Available</option>
+        <option value="checked-out">Checked Out</option>
+      </select>
+    </header>
+    <div class="table-wrapper">
+      <table id="booksTable">
+        <thead>
+          <tr>
+            <th>#</th><th>Title</th><th>Author</th><th>ISBN</th>
+            <th>Total</th><th>Available</th><th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Book Modal -->
+  <div class="modal" id="bookModal" aria-hidden="true">
+    <div class="modal-content">
+      <h2 id="bookModalTitle">New Book</h2>
+      <form id="bookForm">
+        <input type="hidden" id="bookId"/>
+        <label>Title<input id="bookTitle" name="title" type="text" required/></label>
+        <label>Author<input id="bookAuthor" name="author" type="text" required/></label>
+        <label>ISBN<input id="bookISBN" name="isbn" type="text" required/></label>
+        <label>Copies<input id="bookCopies" name="copies" type="number" min="1" required/></label>
+        <div class="modal-actions">
+          <button type="submit">Save</button>
+          <button type="button" id="cancelBook">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div class="modal" id="checkoutModal" aria-hidden="true">
+    <div class="modal-content">
+      <h2>Checkout Book</h2>
+      <form id="checkoutForm">
+        <input type="hidden" id="checkoutBookId"/>
+        <label>Pupil<select id="checkoutPupil" name="pupilId" required></select></label>
+        <label>Due Date<input id="checkoutDue" name="dueDate" type="date" required/></label>
+        <div class="modal-actions">
+          <button type="submit">Checkout</button>
+          <button type="button" id="cancelCheckout">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- History Modal -->
+  <div class="modal" id="historyModal" aria-hidden="true">
+    <div class="modal-content">
+      <h2>Borrowing History</h2>
+      <table id="historyTable">
+        <thead><tr><th>Pupil</th><th>Out Date</th><th>Return Date</th><th>Status</th></tr></thead>
+        <tbody></tbody>
+      </table>
+      <button id="closeHistory">Close</button>
+    </div>
+  </div>
+
+  <script src="library.js"></script>
+</body>
+</html>

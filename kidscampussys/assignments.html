@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Assignments | School Portal</title>
+  <link rel="stylesheet" href="assignments.css"/>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+      <button id="newAssignmentBtn" class="primary-btn">+ New Assignment</button>
+    </header>
+
+    <table id="assignmentsTable">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Title</th>
+          <th>Subject</th>
+          <th>Due Date</th>
+          <th>Resources</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <!-- New Assignment Modal -->
+  <div class="modal" id="assignmentModal" aria-hidden="true">
+    <div class="modal-content">
+      <h2 id="modalTitle">New Assignment</h2>
+      <form id="assignmentForm">
+        <input type="hidden" id="assignmentId"/>
+        <label for="assignTitle">Title</label>
+        <input id="assignTitle" name="title" type="text" required/>
+
+        <label for="assignSubject">Subject</label>
+        <select id="assignSubject" name="subjectId" required>
+          <option value="">Select Subject</option>
+        </select>
+
+        <label for="assignDesc">Description</label>
+        <textarea id="assignDesc" name="description"></textarea>
+
+        <label for="assignDue">Due Date</label>
+        <input id="assignDue" name="dueDate" type="date" required/>
+
+        <label for="assignFiles">Attach Files</label>
+        <input id="assignFiles" name="files" type="file" multiple/>
+
+        <div class="modal-actions">
+          <button type="submit" class="primary-btn">Save</button>
+          <button type="button" id="cancelAssignment" class="secondary-btn">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Submit Work Modal -->
+  <div class="modal" id="submitModal" aria-hidden="true">
+    <div class="modal-content">
+      <h2>Submit Work</h2>
+      <form id="submitForm">
+        <input type="hidden" id="submitAssignmentId"/>
+        <label for="submitFile">Upload File</label>
+        <input id="submitFile" name="file" type="file" required/>
+
+        <label for="submitComment">Comment</label>
+        <textarea id="submitComment" name="comment"></textarea>
+
+        <div class="modal-actions">
+          <button type="submit" class="primary-btn">Submit</button>
+          <button type="button" id="cancelSubmit" class="secondary-btn">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Review Submissions Modal -->
+  <div class="modal" id="reviewModal" aria-hidden="true">
+    <div class="modal-content">
+      <h2>Review Submissions</h2>
+      <table id="submissionsTable">
+        <thead>
+          <tr>
+            <th>Student</th>
+            <th>File</th>
+            <th>Comment</th>
+            <th>Grade</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div class="modal-actions">
+        <button id="saveGrades" class="primary-btn">Save Grades</button>
+        <button id="cancelReview" class="secondary-btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assignments.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 1rem;
+}
+.filters, .actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.table-wrapper {
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+th:nth-child(2), td:nth-child(2) {
+  text-align: left;
+}
+.submit-checkbox {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+@media (max-width: 600px) {
+  .filters, .actions {
+    flex-direction: column;
+  }
+}

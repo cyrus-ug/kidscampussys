@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marks Entry | School Portal</title>
+  <link rel="stylesheet" href="marks-entry.css"/>
+</head>
+<body>
+  <div class="container">
+    <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+    <h1>Marks Entry</h1>
+
+    <div class="filters">
+      <select id="termSelect" required>
+        <option value="">Select Term</option>
+      </select>
+      <select id="classSelect" required>
+        <option value="">Select Class</option>
+      </select>
+      <select id="subjectSelect" required>
+        <option value="">Select Subject</option>
+      </select>
+      <button id="loadBtn">Load Pupils</button>
+    </div>
+
+    <form id="marksForm">
+      <table id="marksTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Pupil Name</th>
+            <th>Mid-Term</th>
+            <th>End-Term</th>
+            <th>Average</th>
+            <th>Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Rows injected here -->
+        </tbody>
+      </table>
+      <button type="submit" class="submit-btn">Save Marks</button>
+      <p id="formError" class="error-message"></p>
+    </form>
+  </div>
+  <script src="marks-entry.js"></script>
+</body>
+</html>

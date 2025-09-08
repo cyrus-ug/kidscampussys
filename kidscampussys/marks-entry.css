@@ -1,0 +1,148 @@
+/* Container & Header */
+.container {
+  max-width: 950px;
+  margin: 2rem auto;
+  padding: 2rem 1.5rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 16px rgba(78, 115, 223, 0.08);
+}
+.back-link {
+  color: #4e73df;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.back-link:hover {
+  color: #2e59d9;
+  text-decoration: underline;
+}
+h1 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #2e59d9;
+  letter-spacing: 0.5px;
+}
+
+/* Filters Bar */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+.filters select,
+.filters button {
+  padding: 0.6rem 1rem;
+  font-size: 1.05rem;
+  border: 1px solid #d1d3e2;
+  border-radius: 6px;
+  background: #f8f9fc;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.filters select:focus,
+.filters button:focus {
+  outline: none;
+  border-color: #4e73df;
+  box-shadow: 0 0 0 2px rgba(78, 115, 223, 0.15);
+}
+.filters button {
+  background: linear-gradient(90deg, #4e73df 60%, #2e59d9 100%);
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 8px rgba(78, 115, 223, 0.08);
+  transition: background 0.2s;
+}
+.filters button:hover {
+  background: linear-gradient(90deg, #2e59d9 60%, #4e73df 100%);
+}
+
+/* Marks Entry Table */
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+.marks-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #f8f9fc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(78, 115, 223, 0.05);
+}
+.marks-table th,
+.marks-table td {
+  padding: 1rem 0.75rem;
+  border: 1px solid #e3e6f0;
+  text-align: center;
+  font-size: 1rem;
+}
+.marks-table th {
+  background: #e9ecef;
+  color: #2e59d9;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+.marks-table td input {
+  width: 3.5rem;
+  padding: 0.4rem;
+  text-align: center;
+  border: 1px solid #d1d3e2;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+.marks-table td input:focus {
+  border-color: #4e73df;
+  outline: none;
+}
+
+/* Submit Button */
+.submit-btn {
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.6rem;
+  background: linear-gradient(90deg, #1cc88a 60%, #17a673 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(28, 200, 138, 0.08);
+  transition: background 0.2s;
+}
+.submit-btn:hover {
+  background: linear-gradient(90deg, #17a673 60%, #1cc88a 100%);
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .container {
+    padding: 1rem 0.5rem;
+  }
+  .filters {
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: stretch;
+  }
+  .marks-table th,
+  .marks-table td {
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1.3rem;
+  }
+    .marks-table th,
+    .marks-table td {
+      font-size: 0.85rem;
+      padding: 0.4rem;
+    }
+  }

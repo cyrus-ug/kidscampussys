@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Parent Portal | School</title>
+  <link rel="stylesheet" href="parent-portal.css"/>
+</head>
+<body>
+  <header class="topbar">
+    <button id="menuBtn">☰</button>
+    <img src="/assets/school logo.png" alt="School Logo" class="logo"/>
+    <div class="user-menu">
+      <span id="parentName">Loading…</span>
+      <button id="logoutBtn">Logout</button>
+    </div>
+  </header>
+
+  <nav class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="#dashboard">Dashboard</a></li>
+      <li><a href="#notifications">Notifications</a></li>
+      <li><a href="#settings">Settings</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    <section id="dashboard" class="section">
+      <h1>Your Children</h1>
+      <div id="childrenList" class="cards-grid">
+        <!-- Cards injected here -->
+      </div>
+    </section>
+
+    <section id="notifications" class="section hidden">
+      <h1>Notifications</h1>
+      <ul id="notificationsList"></ul>
+    </section>
+
+    <section id="settings" class="section hidden">
+      <h1>Alert Settings</h1>
+      <form id="alertSettingsForm">
+        <label><input type="checkbox" name="email" /> Email Alerts</label>
+        <label><input type="checkbox" name="sms" /> SMS Alerts</label>
+        <button type="submit">Save Settings</button>
+      </form>
+    </section>
+    <h1>Fee Status for {{childName}}</h1>
+<table>
+  <thead><tr><th>Term</th><th>Due</th><th>Paid</th><th>Balance</th></tr></thead>
+  <tbody id="feeStatusBody"></tbody>
+</table>
+
+  </main>
+
+  <script src="parent-portal.js"></script>
+</body>
+</html>

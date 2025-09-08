@@ -1,0 +1,71 @@
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 1rem;
+}
+.child-panel {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+.child-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.child-header img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+}
+.event-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.event-table th, .event-table td {
+  padding: 0.5rem;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+.event-table th:first-child, .event-table td:first-child {
+  text-align: left;
+}
+.toggle-checkbox {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.save-btn {
+  padding: 0.6rem 1.2rem;
+  background: #4e73df;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.status-message {
+  margin-top: 0.5rem;
+  color: #1cc88a;
+}
+@media (max-width: 600px) {
+  .event-table th, .event-table td { font-size: 0.9rem; }
+}
+.form-controls {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.reset-btn {
+  padding: 0.6rem 1.2rem;
+  background: #f6c23e;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background: #dda20a;
+}

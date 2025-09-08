@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Report Cards | School Portal</title>
+  <link rel="stylesheet" href="report-cards.css"/>
+</head>
+<body>
+  <div class="container">
+    <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+    <h1>Report Card Generator</h1>
+
+    <div class="filters">
+      <select id="termSelect">
+        <option value="">Select Term</option>
+      </select>
+      <select id="classSelect">
+        <option value="">Select Class</option>
+      </select>
+      <button id="loadBtn">Load Pupils</button>
+    </div>
+
+  <div class="template-select">
+    <label for="emailTemplateSelect">Email Template</label>
+    <select id="emailTemplateSelect">
+      <option value="">Select Template</option>
+    </select>
+  </div>
+
+    <table id="pupilsTable">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Pupil Name</th>
+          <th>Generate PDF</th>
+          <th>Email to Parent</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <!-- Hidden canvas for chart rendering -->
+  <canvas id="performanceChart" width="400" height="200" style="display:none"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/jspdf/dist/jspdf.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf-autotable"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas"></script>
+  <script src="report-cards.js"></script>
+</body>
+</html>

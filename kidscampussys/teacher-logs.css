@@ -1,0 +1,30 @@
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 1rem;
+}
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+th, td {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+@media (max-width: 600px) {
+  .filters { flex-direction: column; }
+  table, .pagination { overflow-x: auto; display: block; }
+}

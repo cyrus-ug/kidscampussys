@@ -1,0 +1,13 @@
+<nav>
+  <ul>
+    <!-- Only admins see Configuration link -->
+    {{#if can 'Config' 'R'}}
+      <li><a href="/config.html">Configuration</a></li>
+    {{/if}}
+    <li><a href="/dashboard.html">Dashboard</a></li>
+    <!-- Teachers see Marks Entry -->
+    {{#if can 'Marks' 'C'}}
+      <li><a href="/marks-entry.html">Marks Entry</a></li>
+    {{/if}}
+  </ul>
+</nav>

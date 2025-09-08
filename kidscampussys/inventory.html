@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Requirements Inventory | School Portal</title>
+  <link rel="stylesheet" href="inventory.css"/>
+</head>
+<body>
+  <div class="container">
+    <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+    <h1>Requirements Inventory Tracker</h1>
+
+    <div class="filters">
+      <select id="termSelect">
+        <option value="">All Terms</option>
+      </select>
+      <select id="classSelect" required>
+        <option value="">Select Class</option>
+      </select>
+      <select id="sectionSelect">
+        <option value="">All Sections</option>
+      </select>
+      <button id="loadBtn">Load</button>
+    </div>
+
+    <div class="actions">
+      <button id="printReport">Print Report</button>
+      <button id="emailMissing">Email Missing Items</button>
+    </div>
+
+    <div class="table-wrapper">
+      <table id="inventoryTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Pupil Name</th>
+            <!-- Requirement columns injected here -->
+            <th>Missing Count</th>
+            <th>Clear</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="inventory.js"></script>
+</body>
+</html>

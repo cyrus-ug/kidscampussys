@@ -1,0 +1,153 @@
+/* Container and layout */
+body {
+  background: #f5f7fa;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+.container {
+  max-width: 540px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(44,62,80,0.08);
+  padding: 32px 24px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #2980b9;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: #34495e;
+}
+
+h1 {
+  font-size: 1.6rem;
+  margin-bottom: 24px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #34495e;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+input[type="email"],
+select {
+  padding: 0.7rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f7fafc;
+  transition: border-color 0.2s;
+}
+
+input:focus,
+select:focus {
+  border-color: #2980b9;
+  outline: none;
+}
+
+/* Fieldset styles */
+fieldset.form-group {
+  border: 1px solid #e1e8ed;
+  border-radius: 8px;
+  padding: 12px 16px 8px 16px;
+  margin-bottom: 8px;
+}
+
+legend {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+fieldset label {
+  margin-right: 18px;
+  font-weight: 400;
+}
+
+/* Checkbox and radio styles */
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 6px;
+}
+
+/* Submit button */
+.submit-btn {
+  background: #2980b9;
+  color: #fff;
+  border: none;
+  padding: 0.9rem 0;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background 0.2s;
+}
+
+.submit-btn:hover {
+  background: #3498db;
+}
+
+/* Error message */
+.error-message {
+  color: #e74c3c;
+  font-size: 1rem;
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 16px 6px;
+  }
+  h1 {
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+  }
+}
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.form-group, fieldset {
+  grid-column: span 2;
+}
+@media (min-width: 600px) {
+  #fullName, #dob { grid-column: span 1; }
+  #guardianName, #guardianPhone { grid-column: span 1; }
+}

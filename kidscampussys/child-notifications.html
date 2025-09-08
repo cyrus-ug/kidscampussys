@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Per-Child Notification Settings | Parent Portal</title>
+  <link rel="stylesheet" href="child-notifications.css"/>
+</head>
+<body>
+  <header class="topbar">
+    <a href="parent-portal.html">← Back to Parent Settings</a>
+    <h1>Notification Settings</h1>
+  </header>
+
+  <main class="container">
+    <form id="notificationsForm">
+      <!-- Panels injected here -->
+      <button type="submit" class="save-btn">Save All Settings</button>
+      <p id="formMsg" class="status-message"></p>
+    </form>
+  </main>
+  <form id="notificationsForm">
+    <!-- Panels injected here -->
+
+    <!-- Controls -->
+    <div class="form-controls">
+      <button id="resetDefaults" type="button" class="reset-btn">
+        Reset to Global Defaults
+      </button>
+      <button type="submit" class="save-btn">
+        Save All Settings
+      </button>
+    </div>
+    <p id="formMsg" class="status-message"></p>
+  </form>
+
+  <script src="child-notifications.js"></script>
+</body>
+</html>

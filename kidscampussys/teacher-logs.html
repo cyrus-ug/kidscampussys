@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Teacher Activity Logs | School Portal</title>
+  <link rel="stylesheet" href="teacher-logs.css"/>
+</head>
+<body>
+  <div class="container">
+    <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+    <h1>Teacher Activity Logs</h1>
+
+    <div class="filters">
+      <select id="teacherSelect">
+        <option value="">All Teachers</option>
+      </select>
+      <select id="actionSelect">
+        <option value="">All Actions</option>
+        <option value="marks_entry">Marks Entry</option>
+        <option value="conduct_report">Conduct Report</option>
+        <option value="term_change">Term Change</option>
+        <!-- add other action types -->
+      </select>
+      <input id="dateFrom" type="date"/>
+      <input id="dateTo" type="date"/>
+      <button id="loadBtn">Load Logs</button>
+      <button id="exportCsv">Export CSV</button>
+    </div>
+
+    <table id="logsTable">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Timestamp</th>
+          <th>Teacher Name</th>
+          <th>Action</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="pagination">
+      <button id="prevPage">Prev</button>
+      <span id="pageInfo">Page 1</span>
+      <button id="nextPage">Next</button>
+    </div>
+  </div>
+
+  <script src="teacher-logs.js"></script>
+</body>
+</html>

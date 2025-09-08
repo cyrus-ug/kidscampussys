@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard | School Portal</title>
+  <link rel="stylesheet" href="dashboard.css"/>
+</head>
+<body>
+  <div class="app">
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+      <ul>
+        <li class="active"><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="pupils.html">Pupils</a></li>
+        <li><a href="teachers.html">Teachers</a></li>
+        <li><a href="classes.html">Classes</a></li>
+        <li><a href="requirements.html">Requirements</a></li>
+        <li><a href="marks-entry.html">Marks Entry</a></li>
+        <li><a href="conduct.html">Conduct Reports</a></li>
+        <li><a href="report-cards.html">Report Cards</a></li>
+        <li><a href="settings.html">Settings</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main">
+      <header class="topbar">
+        <button id="toggleBtn">☰</button>
+        <h1>Dashboard</h1>
+        <div class="user-menu">  
+          <img src="/assets/avatar.png" alt="User Avatar"/>
+        </div>
+      </header>
+
+      <section class="widgets">
+        <div class="widget" id="totalPupils">
+          <span class="widget-icon" style="font-size:2rem;display:block;margin-bottom:8px;">👦</span>
+          Total Pupils<br/><span>–</span></div>
+        <div class="widget" id="totalTeachers">
+          <span class="widget-icon" style="font-size:2rem;display:block;margin-bottom:8px;">👩‍🏫</span>
+          Total Teachers<br/><span>–</span></div>
+        <div class="widget" id="activeTerm">
+          <span class="widget-icon" style="font-size:2rem;display:block;margin-bottom:8px;">📅</span>
+          Active Term<br/><span>–</span></div>
+        <div class="widget" id="upcomingEvents">
+          <span class="widget-icon" style="font-size:2rem;display:block;margin-bottom:8px;">🔔</span>
+          Upcoming Events<br/><span>–</span></div>
+      </section>
+
+      <section class="quick-links">
+        <button onclick="location.href='pupils.html'">Add Pupil</button>
+        <button onclick="printReport()">Print Report</button>
+      </section>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

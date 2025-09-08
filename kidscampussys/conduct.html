@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Conduct Reports | School Portal</title>
+  <link rel="stylesheet" href="conduct.css"/>
+</head>
+<body>
+  <div class="container">
+    <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+    <h1>Conduct Reports</h1>
+
+    <div class="filters">
+      <select id="termSelect" required>
+        <option value="">Select Term</option>
+      </select>
+      <select id="classSelect" required>
+        <option value="">Select Class</option>
+      </select>
+      <button id="loadBtn">Load Pupils</button>
+    </div>
+
+    <form id="conductForm">
+      <table id="conductTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Pupil Name</th>
+            <th>Attendance</th>
+            <th>Behavior</th>
+            <th>Comments</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Rows injected here -->
+        </tbody>
+      </table>
+      <button type="submit" class="submit-btn">Save Reports</button>
+      <p id="formError" class="error-message"></p>
+    </form>
+  </div>
+
+  <script src="conduct.js"></script>
+</body>
+</html>

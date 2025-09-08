@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background: linear-gradient(120deg, #4e73df 0%, #2e59d9 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background: #fff;
+  padding: 2.5rem 2rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 32px rgba(78, 115, 223, 0.13);
+  max-width: 370px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+h1 {
+  font-size: 1.45rem;
+  color: #2e59d9;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+label {
+  font-size: 1rem;
+  color: #4e73df;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid #d1d3e2;
+  border-radius: 7px;
+  font-size: 1rem;
+  background: #f8f9fc;
+  transition: border-color 0.2s;
+  margin-top: 0.3rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #4e73df;
+  outline: none;
+  background: #fff;
+}
+
+.password-toggle {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.toggle-icon {
+  position: absolute;
+  right: 12px;
+  top: 38px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #858796;
+  transition: color 0.2s;
+  user-select: none;
+}
+
+.toggle-icon:hover {
+  color: #4e73df;
+}
+
+.submit-btn {
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background: linear-gradient(90deg, #1cc88a 60%, #17a673 100%);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(28, 200, 138, 0.09);
+  transition: background 0.2s;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(90deg, #17a673 60%, #1cc88a 100%);
+}
+
+.help-text {
+  margin-top: 1.2rem;
+  font-size: 0.97rem;
+  color: #858796;
+}
+
+.help-text a {
+  color: #4e73df;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.help-text a:hover {
+  color: #2e59d9;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .container {
+    padding: 1.2rem 0.7rem;
+    max-width: 98vw;
+  }
+    h1 {
+      font-size:  1.3rem;
+    }
+  }
